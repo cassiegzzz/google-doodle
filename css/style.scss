@@ -1,0 +1,104 @@
+// Template for Google Homepage
+@import "doodle-template";
+
+/* Your Awesome Doodle */
+
+#stage {
+  height: 200px;
+  width: 600px;
+}
+
+#lower-g-tail:hover {
+  animation: swing2 1s ease-in-out infinite;
+}
+
+#upper-g-tail:hover {
+  animation: swing1 1s ease-in-out infinite;
+}
+
+#Layer_1 {
+  width: 600px;
+  animation: falling 3.5s ease-in-out;
+  position: absolute;
+  top: 20%;
+}
+
+#fishlayer {
+  fill: #f3c217;
+  width: 100px;
+  right: 30%;
+  animation: fallingFish 3.5s ease-in-out;
+  position: absolute;
+  top: 10%;
+}
+
+#fishlayer {
+  transition: opacity 1s ease-in-out;
+}
+
+#fishlayer:hover {
+  opacity: 0;
+}
+
+#letter-e:hover {
+  animation: catUp 0.5s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes falling {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes fallingFish {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+
+@keyframes swing1 {
+  0% {
+    transform: skew(2deg) translateY(3px);
+    transform-origin: bottom;
+  }
+
+  50% {
+    transform: skew(-2deg) translateY(3px);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: skew(2deg) translateY(3px);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes swing2 {
+  0% {
+    transform: skew(-2deg) translateY(-3px);
+  }
+
+  50% {
+    transform: skew(2deg) translateY(-3px);
+  }
+
+  100% {
+    transform: skew(-2deg) translateY(-3px);
+  }
+}
+
+@keyframes catUp {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(-50px);
+  }
+}
